@@ -1,0 +1,100 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height:100%;
+    background:linear-gradient(black 0%,purple 50%,pink 100%);
+}
+#react{
+    width: 400px;
+    height:400px;
+    margin: 100px auto;
+    transform-style:preserve-3d;
+    animation:rotate 15s infinite;
+    animation-timing-function: linear;
+}
+#react div{
+    position:absolute;
+    transition: all .7s;
+}
+div .out_pic{
+    width:400px;
+    height:400px;
+    opacity:0.8;
+}
+div .in_pic{
+    width:200px;
+    height:200px;
+}
+#react span{
+    display:block;
+    position:absolute;
+    width:200px;
+    height:200px;
+    top: auto;
+    right: auto;
+    left:auto;
+    bottom: auto;
+}
+@keyframes rotate{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotateY(360deg);}
+}
+.out_frount{
+    transform:translateZ(200px) translateX(-100px) translateY(-100px);
+}
+.out_back{
+    transform:translateZ(-200px) translateX(-100px) translateY(-100px);
+}
+.out_left{
+    transform:rotateY(90deg) translateZ(100px) translateY(-100px);
+}
+.out_right{
+    transform: rotateY(-90deg) translateZ(300px) translateY(-100px);
+}
+.out_top{
+    transform:rotateX(90deg) translateZ(300px) translateX(-100px);
+}
+.out_bottom{
+    transform: rotateX(-90deg) translateZ(100px) translateX(-100px);
+}
+.in_frount{
+    transform:translateZ(100px);
+}
+.in_back{
+    transform:translateZ(-100px);
+}
+.in_left{
+    transform:rotateY(90deg) translateZ(100px);
+}
+.in_right{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.in_top{
+    transform:rotateX(90deg) translateZ(100px);
+}
+.in_bottom{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+#react:hover .out_frount{
+    transform:translateZ(400px);
+}
+#react:hover .out_back{
+    transform:translateZ(-400px);
+}
+#react:hover .out_left{
+    transform:rotateY(90deg) translateZ(400px);
+}
+#react:hover .out_right{
+    transform: rotateY(-90deg) translateZ(400px);
+}
+#react:hover .out_top{
+    transform:rotateX(90deg) translateZ(400px);
+}
+#react:hover .out_bottom{
+    transform: rotateX(-90deg) translateZ(400px);
+}
+@charset "utf-8";
+/* CSS Document */
